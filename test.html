@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+    function curSec(id) {
+        className = document.getElementById(id).getAttribute('class')
+
+        if(className!="active") {
+           
+            var x = document.getElementsByClassName("active");
+            x[0].className="";
+            document.getElementById(id).className = "active";
+        } 
+    }
+
+</script>
+<style>
+
+body {
+    background-color: #d0e4fe;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li a {
+    display: block;
+    color: white;
+    font-family: arial;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+.active {
+    background-color: #4C50AF;
+}
+
+
+
+</style>
+</head>
+<body>
+
+ <ul>
+  <li><a id="home" class="active" href="#home" onclick="curSec(this.id)">Home</a></li>
+  <li><a id="news" href="#news" onclick="curSec(this.id)">Notícias</a></li>
+  <li><a id="contact" href="#contact" onclick="curSec(this.id)">Contato</a></li>
+</ul>
+
+</body>
+</html>
